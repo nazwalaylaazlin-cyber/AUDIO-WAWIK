@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@300;400;500;700&display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins', sans-serif;
+  background:#0f0f0f;
+  color:white;
+  scroll-behavior:smooth;
+}
+
+/* NAVBAR */
+header{
+  background:linear-gradient(90deg,#4b0082,#8a2be2,#ff00ff);
+  padding:15px 40px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+nav{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+}
+
+.logo{
+  font-family:'Anton', sans-serif;
+  letter-spacing:3px;
+  font-size:30px;
+}
+
+nav ul{
+  display:flex;
+  list-style:none;
+  gap:25px;
+}
+
+nav ul li a{
+  text-decoration:none;
+  color:white;
+  font-weight:600;
+  transition:0.3s;
+}
+
+nav ul li a:hover{
+  color:yellow;
+}
+
+/* HERO */
+.hero{
+  height:100vh;
+  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),
+  url('https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?q=80&w=1200&auto=format&fit=crop');
+  background-size:cover;
+  background-position:center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  padding:20px;
+}
+
+.hero h2{
+  font-size:70px;
+  font-family:'Anton', sans-serif;
+  color:#ff00ff;
+  text-shadow:0 0 15px #ff00ff;
+}
+
+.hero p{
+  margin-top:20px;
+  font-size:22px;
+}
+
+.hero button{
+  margin-top:30px;
+  padding:15px 35px;
+  border:none;
+  border-radius:30px;
+  background:#ff00ff;
+  color:white;
+  font-size:18px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.hero button:hover{
+  transform:scale(1.1);
+  background:#8a2be2;
+}
+
+/* SECTION */
+section{
+  padding:80px 10%;
+}
+
+section h2{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:40px;
+  color:#ff00ff;
+  font-family:'Anton', sans-serif;
+  letter-spacing:2px;
+}
+
+/* ABOUT */
+.card{
+  background:#1c1c1c;
+  padding:30px;
+  border-radius:20px;
+  margin-bottom:30px;
+  box-shadow:0 0 15px rgba(255,0,255,0.3);
+}
+
+.card h3{
+  margin-bottom:15px;
+  color:#00ffff;
+}
+
+.card p,
+.card li{
+  line-height:1.8;
+}
+
+.card ul{
+  padding-left:20px;
+}
+
+/* PRODUK */
+.produk-container{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+}
+
+.produk-card{
+  background:#1b1b1b;
+  border-radius:20px;
+  overflow:hidden;
+  text-align:center;
+  transition:0.3s;
+  box-shadow:0 0 15px rgba(255,0,255,0.2);
+}
+
+.produk-card:hover{
+  transform:translateY(-10px);
+}
+
+.produk-card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+}
+
+.produk-card h3{
+  margin:15px 0;
+  color:#00ffff;
+}
+
+.produk-card p{
+  padding:0 15px;
+}
+
+.produk-card span{
+  display:block;
+  margin:20px;
+  font-size:22px;
+  color:yellow;
+  font-weight:bold;
+}
+
+/* KONTAK */
+.kontak{
+  text-align:center;
+}
+
+.kontak-box{
+  background:#1b1b1b;
+  padding:50px;
+  border-radius:20px;
+  box-shadow:0 0 20px rgba(255,0,255,0.3);
+}
+
+.wa-btn{
+  display:inline-block;
+  margin-top:20px;
+  padding:15px 35px;
+  background:#25D366;
+  color:white;
+  text-decoration:none;
+  border-radius:30px;
+  font-size:18px;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.wa-btn:hover{
+  transform:scale(1.1);
+}
+
+.thanks{
+  margin-top:40px;
+  font-size:28px;
+  font-family:'Anton', sans-serif;
+  color:#ff00ff;
+  text-shadow:0 0 10px #ff00ff;
+  line-height:1.7;
+}
+
+/* FOOTER */
+footer{
+  background:black;
+  text-align:center;
+  padding:20px;
+  color:#aaa;
+}
+
+/* RESPONSIVE */
+@media(max-width:768px){
+
+  nav{
+    flex-direction:column;
+    gap:15px;
+  }
+
+  .hero h2{
+    font-size:50px;
+  }
+
+  .hero p{
+    font-size:18px;
+  }
+
+  section{
+    padding:60px 7%;
+  }
+
+}
